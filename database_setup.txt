@@ -1,0 +1,6 @@
+1. create a mysql database
+2. copy the full name of the database
+3. insert into important info text file
+4. create a user on the database
+5. inset user info into important info text file
+6. give user appropriate permissions
