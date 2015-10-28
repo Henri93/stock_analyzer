@@ -48,8 +48,23 @@ function fileToDatabase($textFile, $tableName)
     
   }
   fclose($file);
-  
-  
-  
 }
+
+function main()
+{
+  $mainTickerFile - fopen("tickerMaster.txt", "r");
+  while(!feof($mainTickerFile))
+  {
+    $companyTicker = fgets($mainTickerFile);
+    $companyTicker = trim($companyTicker);
+    
+    $fileURL = createURL($companyTicker);
+    $companyTxtFile = "txtFiles/".$companyTicker.".txt";
+    getCSVFile($fileURL, $companyTxtFile);
+    fileToDatabase($companyTxtFile, $companyTicker);
+  }
+}
+
+main();
+
 <?>
